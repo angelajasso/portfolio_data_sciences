@@ -1,16 +1,23 @@
 import reflex as rx
 
-def index():
+def header():
     return rx.hstack(
-        rx.button(
-            "Decrement",
-            color_scheme="ruby",
+        rx.image(src="../assets/Logo.svg"),
+        rx.el.h2(
+            "Angela Jasso",
+            font_size="1.6rem",
+            color="#1C1817",
         ),
-        rx.heading(font_size="2em"),
-        rx.button(
-            "Increment",
-            color_scheme="grass",
-        ),
+        width="100%",
+        background_color="#FCD4CF",
+        spacing="4",
+        border_radius="20px",
+    )
+
+def index():
+    return rx.vstack(
+        header(),
+        background_color="#FEE9E6",
         spacing="4",
     )
 
