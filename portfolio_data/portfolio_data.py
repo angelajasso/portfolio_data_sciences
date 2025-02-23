@@ -23,7 +23,7 @@ def header():
         spacing="4",
         border_radius="20px",
         margin="4px",
-        text_align="center",
+        align="center",
     )
 
 def index():
@@ -31,7 +31,19 @@ def index():
         header(),
         background_color="#FEE9E6",
         spacing="4",
-        text_align="center",
+        justify="center",
+        style={
+            "media_queries": {
+                "(min-width: 768px)": {  # Tablets y más grandes
+                    "flex_direction": "row",  # En pantallas grandes, cambia a fila
+                    "justify_content": "center",
+                },
+                "(min-width: 1024px)": {  # Desktop
+                    "font_size": "24px",
+                    "width": "80%",
+                },
+            }
+        }
     )
 
 app = rx.App()
