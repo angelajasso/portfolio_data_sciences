@@ -17,12 +17,12 @@ def header():
             font_size="1.6rem",
             color="#1C1817",
         ),
-        width="99%",
+        width="95%",
         height="auto",
         background_color="#FCD4CF",
         spacing="4",
         border_radius="20px",
-        margin="4px",
+        margin="8px",
         align="center",
     )
     
@@ -31,10 +31,19 @@ def main():
         rx.box(
             rx.el.h2(
             "Data Scientist with Python",
-            font_size="2rem",
+            font_size="2.4rem",
             color="#1C1817",
-            background="#FCD4CF",
+            margin="16px",
+            text_align="center",
+            
+            
             ),
+            border_radius="20px",
+            margin="0 8px",
+            align="center",
+            width="95%",
+            height="20rem",
+            background="#FCD4CF",
         ),
         
         rx.image(
