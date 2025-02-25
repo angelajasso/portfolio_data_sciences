@@ -12,7 +12,7 @@ def header():
             margin="16px",
         ),
         
-        rx.el.h2(
+        rx.el.h1(
             "Angela Jasso",
             font_size="1.6rem",
             color="#1C1817",
@@ -25,16 +25,38 @@ def header():
         margin="4px",
         align="center",
     )
+    
+def main():
+    return rx.vstack(
+        rx.box(
+            rx.el.h2(
+            "Data Scientist with Python",
+            font_size="2rem",
+            color="#1C1817",
+            background="#FCD4CF",
+            ),
+        ),
+        
+        rx.image(
+            src="/assets/descarga.png",
+            width="100px", 
+            height="auto"
+        ),
+        # background_color="#FEE9E6",
+        # spacing="4",
+        # justify="center",
+    )
 
 def index():
     return rx.vstack(
         header(),
+        main(),
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
         style={
             "media_queries": {
-                "(min-width: 768px)": {  # Tablets y más grandes
+                "(min-width: 650px)": {  # Tablets y más grandes
                     "flex_direction": "row",  # En pantallas grandes, cambia a fila
                     "justify_content": "center",
                 },
