@@ -47,13 +47,14 @@ def main():
         ),
         
         rx.image(
-            src="/assets/descarga.png",
-            width="100px", 
-            height="auto"
+            src="descarga.png",
+            width="95%", 
+            height="auto",
+            border_radius="20px",
         ),
-        # background_color="#FEE9E6",
-        # spacing="4",
-        # justify="center",
+        background_color="#FEE9E6",
+        spacing="4",
+        justify="center",
     )
 
 def index():
