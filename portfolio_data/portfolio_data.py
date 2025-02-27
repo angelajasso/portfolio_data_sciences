@@ -29,32 +29,44 @@ def header():
 def main():
     return rx.vstack(
         rx.box(
-            rx.el.h2(
-            "Data Scientist with Python",
-            font_size="2.4rem",
-            color="#1C1817",
-            margin="16px",
-            text_align="center",
+            rx.box(
+                rx.el.h2(
+                    "Data Scientist with Python",
+                    font_size="2.4rem",
+                    color="#1C1817",
+                    margin="16px",
+                    text_align="center",
             
             
+                ),
+                border_radius="20px",
+                margin="0 8px",
+                align="center",
+                width="95%",
+                height="20rem",
+                background="#FCD4CF",
             ),
-            border_radius="20px",
-            margin="0 8px",
-            align="center",
-            width="95%",
-            height="20rem",
-            background="#FCD4CF",
-        ),
         
-        rx.image(
-            src="descarga.png",
-            width="95%", 
-            height="auto",
-            border_radius="20px",
+            rx.image(
+                src="descarga.png",
+                width="95%", 
+                height="auto",
+                border_radius="20px",
+            ),
+        ),
+        rx.box(
+            rx.el.p(
+                "Angela Jasso is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.",
+                font_size="2rem",
+                color="#1C1817",
+                margin="16px",
+                text_align="center",
+            ),
         ),
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
+        
     )
 
 def index():
