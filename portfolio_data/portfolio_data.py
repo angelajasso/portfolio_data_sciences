@@ -36,8 +36,6 @@ def main():
                     color="#1C1817",
                     margin="16px",
                     text_align="center",
-            
-            
                 ),
                 border_radius="20px",
                 margin="0 8px",
@@ -63,10 +61,27 @@ def main():
                 text_align="center",
             ),
         ),
+        rx.box(
+            rx.el.p(
+                "Musea",
+                font_size="1rem",
+                color="#1C1817",
+                margin="16px",
+                text_align="center",
+            ),
+            rx.image(
+                src="mokup.png",
+                width="95%", 
+                height="auto",
+                border_radius="20px",
+            ),
+            rx.divider(),
+        ),
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
-        
+        direction="column",
+        align="center",
     )
 
 def index():
