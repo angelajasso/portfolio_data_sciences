@@ -62,20 +62,91 @@ def main():
             ),
         ),
         rx.box(
-            rx.el.p(
-                "Musea",
-                font_size="1rem",
-                color="#1C1817",
-                margin="16px",
-                text_align="center",
+            rx.flex(
+                rx.el.p(
+                    "Musea",
+                    font_size="1rem",
+                    color="#1C1817",
+                    margin="16px",
+                    text_align="center",
+                ),
+                rx.icon(
+                    "move-up-right", 
+                    size=18, 
+                    color="#F7ABA1"
+                ),
+                direction="row",
+                gap="1",
+                align="center",
             ),
+            
             rx.image(
                 src="mokup.png",
                 width="95%", 
                 height="auto",
                 border_radius="20px",
             ),
-            rx.divider(),
+            rx.divider(size="4", color_scheme="ruby"),
+            rx.flex(
+                rx.el.p(
+                    "Musea",
+                    font_size="1rem",
+                    color="#1C1817",
+                    margin="16px",
+                    text_align="center",
+                ),
+                rx.icon(
+                    "move-up-right", 
+                    size=18, 
+                    color="#F7ABA1"
+                ),
+                
+                direction="row",
+                gap="4",
+                align="center",
+            ),
+            rx.divider(size="4", color_scheme="ruby"),
+            rx.flex(
+                rx.el.p(
+                    "Musea",
+                    font_size="1rem",
+                    color="#1C1817",
+                    margin="16px",
+                    text_align="center",
+                ),
+                rx.icon(
+                    "move-up-right", 
+                    size=18, 
+                    color="#F7ABA1"
+                ),
+                
+                direction="row",
+                gap="4",
+                align="center",
+            ),
+            rx.divider(size="4", color_scheme="ruby"),
+            rx.flex(
+                rx.el.p(
+                    "Musea",
+                    font_size="1rem",
+                    color="#1C1817",
+                    margin="16px",
+                    text_align="center",
+                ),
+                rx.icon(
+                    "move-up-right", 
+                    size=18, 
+                    color="#F7ABA1"
+                ),
+                
+                direction="row",
+                gap="4",
+                align="center",
+            ),
+            rx.divider(size="4", color_scheme="ruby"),
+            spacing="4",
+            direction="column",
+            align="center",
         ),
         background_color="#FEE9E6",
         spacing="4",
