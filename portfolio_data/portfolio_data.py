@@ -154,11 +154,31 @@ def main():
         direction="column",
         align="center",
     )
+    
+def footer():
+    return rx.hstack(
+        rx.link(
+            "GitHub", 
+            href="https://reflex.dev/"
+        ),
+        rx.link(
+            "Kaggle", 
+            href="https://reflex.dev/"
+        ),
+        width="95%",
+        height="auto",
+        background_color="#F7ABA1",
+        spacing="4",
+        border_radius="20px",
+        margin="8px",
+        align="center",
+    )
 
 def index():
     return rx.vstack(
         header(),
         main(),
+        footer(),
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
