@@ -1,5 +1,13 @@
 import reflex as rx
 
+class MyState(rx.State):
+    accent = "#F7ABA1"
+    bg_color = "#FCD4CF"
+    black = "#1C1817"
+    white = "#FEE9E6"
+    
+    
+
 def header():
     return rx.hstack(
         rx.html(
@@ -15,11 +23,11 @@ def header():
         rx.el.h1(
             "Angela Jasso",
             font_size="1.6rem",
-            color="#1C1817",
+            color=MyState.black
         ),
         width="95%",
         height="auto",
-        background_color="#FCD4CF",
+        background_color=MyState.bg_color,
         spacing="4",
         border_radius="20px",
         margin="8px",
@@ -44,13 +52,26 @@ def main():
                 height="20rem",
                 background="#FCD4CF",
             ),
-        
-            rx.image(
+            rx.box(
+                rx.image(
                 src="descarga.png",
-                width="95%", 
-                height="auto",
-                border_radius="20px",
+                width="300px", 
+                height="400px",
+                border_radius="150px",
             ),
+            width="95%",
+            height="auto",
+            spacing="4",
+            margin="8px",
+            align="center",
+            ),
+        width="95%",
+        height="auto",
+        background_color="#FCD4CF",
+        spacing="4",
+        border_radius="20px",
+        margin="8px",
+        align="center",
         ),
         rx.box(
             rx.el.p(
@@ -156,7 +177,7 @@ def main():
             border_radius="20px",
             margin="0 8px",
             width="95%",
-            height="20rem",
+            height="auto",
             background="#FCD4CF",
         ),
         background_color="#FEE9E6",
@@ -170,14 +191,16 @@ def footer():
     return rx.hstack(
         rx.link(
             "GitHub", 
-            href="https://reflex.dev/"
+            href="https://reflex.dev/",
+            color="#FEE9E6"
         ),
         rx.link(
             "Kaggle", 
-            href="https://reflex.dev/"
+            href="https://reflex.dev/",
+            color="#FEE9E6"
         ),
         width="95%",
-        height="auto",
+        height="80px",
         background_color="#F7ABA1",
         spacing="4",
         border_radius="20px",
