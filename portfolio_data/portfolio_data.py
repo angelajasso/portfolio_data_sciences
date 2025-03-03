@@ -39,7 +39,7 @@ def hero():
         rx.el.h2(
             "Data Scientist with Python",
             font_size="2.4rem",
-            color="#1C1817",
+            color=MyState.black,
             margin="32px",
             text_align="center",
         ),
@@ -49,7 +49,7 @@ def hero():
         align_items="center",
         height="30rem",
         width="calc(100% - 2rem)",  # O ajusta el valor según el margen deseado
-        margin="1rem",  # Espacio alrededor
+        margin="0 1rem",  # Espacio alrededor
         background=MyState.bg_color,
     )
     
@@ -76,7 +76,7 @@ def about():
         rx.el.p(
             "Angela Jasso is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.",
             font_size="2rem",
-            color="#1C1817",
+            color=MyState.black,
             margin="16px",
             text_align="center",
         ),
@@ -89,21 +89,21 @@ def about():
         margin="0 1rem",  # Espacio alrededor
         background=MyState.bg_color,
     )
-    
-def projects():
+
+def project_one():
     return rx.box(
         rx.flex(
             rx.el.p(
                 "Musea",
                 font_size="1rem",
-                color="#1C1817",
+                color=MyState.black,
                 margin="16px",
                 text_align="center",
             ),
             rx.icon(
                 "move-up-right", 
                 size=18, 
-                color=MyState.accent
+                color=MyState.accent,
             ),
             direction="row",
             gap="1",
@@ -112,10 +112,15 @@ def projects():
             
         rx.image(
             src="mokup.png",
-            width="95%", 
-            height="auto",
+            width="20rem", 
+            height="20rem",
             border_radius="20px",
         ),
+    )  
+
+def projects():
+    return rx.box(
+        project_one(),
         rx.divider(
             size="4", 
             color_scheme="ruby"
@@ -124,14 +129,14 @@ def projects():
             rx.el.p(
                 "Musea",
                 font_size="1rem",
-                color="#1C1817",
+                color=MyState.black,
                 margin="16px",
                 text_align="center",
             ),
             rx.icon(
                 "move-up-right", 
                 size=18, 
-                color="#F7ABA1"
+                color=MyState.accent,
             ),
                 
             direction="row",
@@ -143,14 +148,14 @@ def projects():
             rx.el.p(
                 "Musea",
                 font_size="1rem",
-                color="#1C1817",
+                color=MyState.black,
                 margin="16px",
                 text_align="center",
             ),
             rx.icon(
                 "move-up-right", 
                 size=18, 
-                color="#F7ABA1"
+                color=MyState.accent,
             ),
                 
             direction="row",
@@ -162,14 +167,14 @@ def projects():
             rx.el.p(
                 "Musea",
                 font_size="1rem",
-                color="#1C1817",
+                color=MyState.black,
                 margin="16px",
                 text_align="center",
             ),
             rx.icon(
                 "move-up-right", 
                 size=18, 
-                color="#F7ABA1"
+                color=MyState.accent,
             ),
                 
             direction="row",
@@ -184,7 +189,7 @@ def projects():
         margin="0 8px",
         width="95%",
         height="auto",
-        background="#FCD4CF",
+        background=MyState.bg_color,
     )
     
 def main():
@@ -193,7 +198,7 @@ def main():
         photo(),
         about(),
         projects(),
-        background_color="#FEE9E6",
+        background_color=MyState.white,
         spacing="4",
         justify="center",
         direction="column",
@@ -205,16 +210,16 @@ def footer():
         rx.link(
             "GitHub", 
             href="https://reflex.dev/",
-            color="#FEE9E6"
+            color=MyState.white,
         ),
         rx.link(
             "Kaggle", 
             href="https://reflex.dev/",
-            color="#FEE9E6"
+            color=MyState.white,
         ),
         width="95%",
         height="80px",
-        background_color="#F7ABA1",
+        background_color=MyState.accent,
         spacing="4",
         border_radius="20px",
         margin="8px",
@@ -226,7 +231,7 @@ def index():
         header(),
         main(),
         footer(),
-        background_color="#FEE9E6",
+        background_color=MyState.white,
         spacing="4",
         justify="center",
         align="center",
