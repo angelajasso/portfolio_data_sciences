@@ -22,164 +22,177 @@ def header():
         
         rx.el.h1(
             "Angela Jasso",
-            font_size="1.6rem",
+            font_size="2.4rem",
             color=MyState.black
         ),
-        width="95%",
-        height="auto",
+        width="calc(100% - 2rem)",
+        height="80px",
         background_color=MyState.bg_color,
         spacing="4",
         border_radius="20px",
-        margin="8px",
+        margin="1rem",
         align="center",
     )
     
-def main():
-    return rx.vstack(
-        rx.box(
-            rx.box(
-                rx.el.h2(
-                    "Data Scientist with Python",
-                    font_size="2.4rem",
-                    color="#1C1817",
-                    margin="16px",
-                    text_align="center",
-                ),
-                border_radius="20px",
-                margin="0 8px",
-                align="center",
-                width="95%",
-                height="20rem",
-                background="#FCD4CF",
-            ),
-            rx.box(
-                rx.image(
-                src="descarga.png",
-                width="300px", 
-                height="400px",
-                border_radius="150px",
-            ),
-            width="95%",
-            height="auto",
-            spacing="4",
-            margin="8px",
-            align="center",
-            ),
-        width="95%",
-        height="auto",
-        background_color="#FCD4CF",
-        spacing="4",
-        border_radius="20px",
-        margin="8px",
-        align="center",
+def hero():
+    return rx.box(
+        rx.el.h2(
+            "Data Scientist with Python",
+            font_size="2.4rem",
+            color="#1C1817",
+            margin="32px",
+            text_align="center",
         ),
-        rx.box(
+        border_radius="20px",
+        display="flex",
+        justify_content="center",
+        align_items="center",
+        height="30rem",
+        width="calc(100% - 2rem)",  # O ajusta el valor según el margen deseado
+        margin="1rem",  # Espacio alrededor
+        background=MyState.bg_color,
+    )
+    
+def photo():
+    return rx.box(
+        rx.image(
+            src="descarga.png",
+            width="300px", 
+            height="400px",
+            border_radius="150px",
+        ),
+        border_radius="20px",
+        display="flex",
+        justify_content="center",
+        align_items="center",
+        height="30rem",
+        width="calc(100% - 2rem)",  # O ajusta el valor según el margen deseado
+        margin="1rem",  # Espacio alrededor
+        background=MyState.bg_color,
+    )
+    
+def about():
+    return rx.box(
+        rx.el.p(
+            "Angela Jasso is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.",
+            font_size="2rem",
+            color="#1C1817",
+            margin="16px",
+            text_align="center",
+        ),
+        border_radius="20px",
+        display="flex",
+        justify_content="center",
+        align_items="center",
+        height="30rem",
+        width="calc(100% - 2rem)",  # O ajusta el valor según el margen deseado
+        margin="0 1rem",  # Espacio alrededor
+        background=MyState.bg_color,
+    )
+    
+def projects():
+    return rx.box(
+        rx.flex(
             rx.el.p(
-                "Angela Jasso is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.",
-                font_size="2rem",
+                "Musea",
+                font_size="1rem",
                 color="#1C1817",
                 margin="16px",
                 text_align="center",
             ),
-            border_radius="20px",
-            margin="0 8px",
-            align="center",
-            width="95%",
-            height="20rem",
-            background="#FCD4CF",
-        ),
-        rx.box(
-            rx.flex(
-                rx.el.p(
-                    "Musea",
-                    font_size="1rem",
-                    color="#1C1817",
-                    margin="16px",
-                    text_align="center",
-                ),
-                rx.icon(
-                    "move-up-right", 
-                    size=18, 
-                    color="#F7ABA1"
-                ),
-                direction="row",
-                gap="1",
-                align="center",
+            rx.icon(
+                "move-up-right", 
+                size=18, 
+                color=MyState.accent
             ),
+            direction="row",
+            gap="1",
+            align="center",
+        ),
             
-            rx.image(
-                src="mokup.png",
-                width="95%", 
-                height="auto",
-                border_radius="20px",
-            ),
-            rx.divider(size="4", color_scheme="ruby"),
-            rx.flex(
-                rx.el.p(
-                    "Musea",
-                    font_size="1rem",
-                    color="#1C1817",
-                    margin="16px",
-                    text_align="center",
-                ),
-                rx.icon(
-                    "move-up-right", 
-                    size=18, 
-                    color="#F7ABA1"
-                ),
-                
-                direction="row",
-                gap="4",
-                align="center",
-            ),
-            rx.divider(size="4", color_scheme="ruby"),
-            rx.flex(
-                rx.el.p(
-                    "Musea",
-                    font_size="1rem",
-                    color="#1C1817",
-                    margin="16px",
-                    text_align="center",
-                ),
-                rx.icon(
-                    "move-up-right", 
-                    size=18, 
-                    color="#F7ABA1"
-                ),
-                
-                direction="row",
-                gap="4",
-                align="center",
-            ),
-            rx.divider(size="4", color_scheme="ruby"),
-            rx.flex(
-                rx.el.p(
-                    "Musea",
-                    font_size="1rem",
-                    color="#1C1817",
-                    margin="16px",
-                    text_align="center",
-                ),
-                rx.icon(
-                    "move-up-right", 
-                    size=18, 
-                    color="#F7ABA1"
-                ),
-                
-                direction="row",
-                gap="4",
-                align="center",
-            ),
-            rx.divider(size="4", color_scheme="ruby"),
-            spacing="4",
-            direction="column",
-            align="center",
-            border_radius="20px",
-            margin="0 8px",
-            width="95%",
+        rx.image(
+            src="mokup.png",
+            width="95%", 
             height="auto",
-            background="#FCD4CF",
+            border_radius="20px",
         ),
+        rx.divider(
+            size="4", 
+            color_scheme="ruby"
+        ),
+        rx.flex(
+            rx.el.p(
+                "Musea",
+                font_size="1rem",
+                color="#1C1817",
+                margin="16px",
+                text_align="center",
+            ),
+            rx.icon(
+                "move-up-right", 
+                size=18, 
+                color="#F7ABA1"
+            ),
+                
+            direction="row",
+            gap="4",
+            align="center",
+            ),
+        rx.divider(size="4", color_scheme="ruby"),
+        rx.flex(
+            rx.el.p(
+                "Musea",
+                font_size="1rem",
+                color="#1C1817",
+                margin="16px",
+                text_align="center",
+            ),
+            rx.icon(
+                "move-up-right", 
+                size=18, 
+                color="#F7ABA1"
+            ),
+                
+            direction="row",
+            gap="4",
+            align="center",
+        ),
+        rx.divider(size="4", color_scheme="ruby"),
+        rx.flex(
+            rx.el.p(
+                "Musea",
+                font_size="1rem",
+                color="#1C1817",
+                margin="16px",
+                text_align="center",
+            ),
+            rx.icon(
+                "move-up-right", 
+                size=18, 
+                color="#F7ABA1"
+            ),
+                
+            direction="row",
+            gap="4",
+            align="center",
+        ),
+        rx.divider(size="4", color_scheme="ruby"),
+        spacing="4",
+        direction="column",
+        align="center",
+        border_radius="20px",
+        margin="0 8px",
+        width="95%",
+        height="auto",
+        background="#FCD4CF",
+    )
+    
+def main():
+    return rx.vstack(
+        hero(),
+        photo(),
+        about(),
+        projects(),
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
@@ -216,6 +229,7 @@ def index():
         background_color="#FEE9E6",
         spacing="4",
         justify="center",
+        align="center",
         style={
             "media_queries": {
                 "(min-width: 650px)": {  # Tablets y más grandes
