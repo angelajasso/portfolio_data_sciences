@@ -91,7 +91,7 @@ def about():
     )
 
 def project_one():
-    return rx.box(
+    return rx.flex(
         rx.flex(
             rx.el.p(
                 "Musea",
@@ -116,11 +116,19 @@ def project_one():
             height="20rem",
             border_radius="20px",
         ),
+        spacing="4",
+        display="flex",
+        justify_content="center",
+        align_items="center",
+        direction="column",
+        gap="4", 
+        
     )  
 
 def projects():
     return rx.box(
         project_one(),
+        
         rx.divider(
             size="4", 
             color_scheme="ruby"
