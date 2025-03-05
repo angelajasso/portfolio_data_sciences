@@ -37,7 +37,7 @@ def header():
 def hero():
     return rx.box(
         rx.el.h2(
-            "Data Scientist with Python",
+            "Data Scientist | Python Enthusiast 🐍",
             font_size="2.4rem",
             color=MyState.black,
             margin="32px",
@@ -74,7 +74,7 @@ def photo():
 def about():
     return rx.box(
         rx.el.p(
-            "Angela Jasso is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.",
+            "Angela Jasso turns data into stories and numbers into decisions. 🚀 With experience in machine learning, data analysis, and visualization, she uses tools like Pandas, Scikit-learn, and NumPy to create impact. 🔍📈",
             font_size="2rem",
             color=MyState.black,
             margin="16px",
@@ -90,8 +90,8 @@ def about():
         background=MyState.bg_color,
     )
 
-def project_one():
-    return rx.flex(
+def projects():
+    return rx.box(
         rx.flex(
             rx.el.p(
                 "Musea",
@@ -105,30 +105,11 @@ def project_one():
                 size=18, 
                 color=MyState.accent,
             ),
+                
             direction="row",
-            gap="1",
+            gap="4",
             align="center",
-        ),
-            
-        rx.image(
-            src="mokup.png",
-            width="20rem", 
-            height="20rem",
-            border_radius="20px",
-        ),
-        spacing="4",
-        display="flex",
-        justify_content="center",
-        align_items="center",
-        direction="column",
-        gap="4", 
-        
-    )  
-
-def projects():
-    return rx.box(
-        project_one(),
-        
+            ),
         rx.divider(
             size="4", 
             color_scheme="ruby"
@@ -231,7 +212,9 @@ def footer():
         spacing="4",
         border_radius="20px",
         margin="8px",
-        align="center",
+        display="flex",
+        justify_content="center",
+        align_items="center",
     )
 
 def index():
