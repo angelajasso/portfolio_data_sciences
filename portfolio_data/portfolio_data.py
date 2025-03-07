@@ -22,7 +22,7 @@ def header():
         
         rx.el.h1(
             "Angela Jasso",
-            font_size="2.4rem",
+            font_size="1.5rem",
             color=MyState.black
         ),
         width="calc(100% - 2rem)",
@@ -71,11 +71,12 @@ def photo():
         background=MyState.bg_color,
     )
     
+    
 def about():
     return rx.box(
         rx.el.p(
             "Angela Jasso turns data into stories and numbers into decisions. 🚀 With experience in machine learning, data analysis, and visualization, she uses tools like Pandas, Scikit-learn, and NumPy to create impact. 🔍📈",
-            font_size="2rem",
+            font_size="1rem",
             color=MyState.black,
             margin="16px",
             text_align="center",
@@ -86,7 +87,7 @@ def about():
         align_items="center",
         height="30rem",
         width="calc(100% - 2rem)",  # O ajusta el valor según el margen deseado
-        margin="0 1rem",  # Espacio alrededor
+        margin="1rem",  # Espacio alrededor
         background=MyState.bg_color,
     )
 
@@ -170,7 +171,6 @@ def projects():
             gap="4",
             align="center",
         ),
-        rx.divider(size="4", color_scheme="ruby"),
         spacing="4",
         direction="column",
         align="center",
@@ -181,18 +181,18 @@ def projects():
         background=MyState.bg_color,
     )
     
-def main():
-    return rx.vstack(
-        hero(),
-        photo(),
-        about(),
-        projects(),
-        background_color=MyState.white,
-        spacing="4",
-        justify="center",
-        direction="column",
-        align="center",
-    )
+# def main():
+#     return rx.vstack(
+#         hero(),
+#         photo(),
+#         about(),
+#         projects(),
+#         background_color=MyState.white,
+#         spacing="4",
+#         justify="center",
+#         direction="column",
+#         align="center",
+#     )
     
 def footer():
     return rx.hstack(
@@ -206,6 +206,8 @@ def footer():
             href="https://reflex.dev/",
             color=MyState.white,
         ),
+        font_size="1rem",
+        color=MyState.black,
         width="95%",
         height="80px",
         background_color=MyState.accent,
@@ -218,10 +220,15 @@ def footer():
     )
 
 def index():
-    return rx.vstack(
-        header(),
-        main(),
-        footer(),
+    return rx.grid(
+        header(grid_column="1 / span 3", grid_row="1"),
+        hero(grid_column="1", grid_row="2"),
+        photo(grid_column="2", grid_row="2"),
+        about(grid_column="1 / span 2", grid_row="3"),
+        projects(grid_column="3", grid_row="2 / span 3"),
+        footer(grid_column="1 / span 3", grid_row="4"),
+        columns="1",
+        
         background_color=MyState.white,
         spacing="4",
         justify="center",
@@ -229,12 +236,15 @@ def index():
         style={
             "media_queries": {
                 "(min-width: 650px)": {  # Tablets y más grandes
-                    "flex_direction": "row",  # En pantallas grandes, cambia a fila
-                    "justify_content": "center",
+                    "columns": "2",  # Se divide en 2 columnas
+                    "width": "90%",
+                    "grid_template_rows": "auto",
                 },
                 "(min-width: 1024px)": {  # Desktop
-                    "font_size": "24px",
+                    "columns": "3",  # En desktop, 3 columnas
+                    "grid_template_rows": "auto",
                     "width": "80%",
+                    "font_size": "24px",
                 },
             }
         }
