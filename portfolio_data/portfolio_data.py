@@ -221,30 +221,50 @@ def footer():
 
 def index():
     return rx.grid(
-        header(grid_column="1 / span 3", grid_row="1"),
-        hero(grid_column="1", grid_row="2"),
-        photo(grid_column="2", grid_row="2"),
-        about(grid_column="1 / span 2", grid_row="3"),
-        projects(grid_column="3", grid_row="2 / span 3"),
-        footer(grid_column="1 / span 3", grid_row="4"),
+        rx.box(header(), grid_column="1 / span 3", grid_row="1"),
+        rx.box(hero(), grid_column="1", grid_row="2"),
+        rx.box(photo(), grid_column="2", grid_row="2"),
+        rx.box(about(), grid_column="1 / span 2", grid_row="3"),
+        rx.box(projects(), grid_column="3", grid_row="2 / span 3"),
+        rx.box(footer(), grid_column="1 / span 3", grid_row="4"),
         columns="1",
-        
         background_color=MyState.white,
         spacing="4",
         justify="center",
         align="center",
         style={
             "media_queries": {
-                "(min-width: 650px)": {  # Tablets y más grandes
-                    "columns": "2",  # Se divide en 2 columnas
-                    "width": "90%",
+                "(min-width: 650px)": {  
+                    # **Tablets (Se reorganiza)**
+                    "columns": "2",
                     "grid_template_rows": "auto",
+                    "width": "90%",
+                    "grid_column_gap": "1rem",
+                    "grid_row_gap": "1rem",
+                    
+                    # **Nueva disposición**
+                    "grid_template_areas": """
+                        'header  header'
+                        'hero    photo'
+                        'about   about'
+                        'projects projects'
+                        'footer  footer'
+                    """,
                 },
-                "(min-width: 1024px)": {  # Desktop
-                    "columns": "3",  # En desktop, 3 columnas
+                "(min-width: 1024px)": {  
+                    # **Desktop (Se expande)**
+                    "columns": "3",
                     "grid_template_rows": "auto",
                     "width": "80%",
                     "font_size": "24px",
+                    
+                    # **Distribución más avanzada**
+                    "grid_template_areas": """
+                        'header   header   header'
+                        'hero     photo    projects'
+                        'about    about    projects'
+                        'footer   footer   footer'
+                    """,
                 },
             }
         }
